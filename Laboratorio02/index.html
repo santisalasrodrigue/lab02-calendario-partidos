@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 - Partidos</title>
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div>
+      <h1>⚽ MUNDIAL<span class="accent"> 2026</span></h1>
+      <p class="header-tagline">104 Partidos · 3 Países Anfitriones · En Vivo</p>
+    </div>
+    <div class="header-actions">
+      <span id="userStatus" class="user-status"></span>
+      <button id="logoutBtn" class="btn-secondary hidden">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <!-- Banner de modo offline (oculto por defecto) -->
+  <div id="offlineBanner" class="offline-banner hidden" role="alert">
+    ⚠️ Modo Offline / Datos no actualizados
+  </div>
+
+  <!-- Filtros -->
+  <section class="filters">
+    <label>
+      Filtrar por grupo:
+      <select id="groupFilter">
+        <option value="">Todos</option>
+      </select>
+    </label>
+    <label>
+      Filtrar por estadio:
+      <select id="stadiumFilter">
+        <option value="">Todos</option>
+      </select>
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="favoritesOnly">
+      Solo favoritos
+    </label>
+    <button id="reloadBtn" class="btn-secondary">🔄 Actualizar marcador</button>
+  </section>
+
+  <!-- Loader -->
+  <div id="loader" class="loader hidden">Cargando partidos…</div>
+
+  <!-- Contenedor principal de tarjetas (aquí se hace la delegación de eventos) -->
+  <main id="matchesContainer" class="matches-grid" aria-live="polite"></main>
+
+  <!-- Sentinela para IntersectionObserver (renderizado progresivo) -->
+  <div id="scrollSentinel" class="sentinel"></div>
+
+  <p id="emptyState" class="empty-state hidden">No hay partidos que coincidan con el filtro.</p>
+
+  <!-- Modal de autenticación / reautenticación -->
+  <div id="authModal" class="modal-overlay hidden">
+    <div class="modal">
+      <h2 id="authModalTitle">Iniciar sesión</h2>
+      <p id="authModalMsg" class="modal-msg hidden">Tu sesión expiró. Inicia sesión de nuevo para continuar (tus filtros y favoritos se mantienen).</p>
+
+      <form id="authForm">
+        <div id="nameField" class="form-group hidden">
+          <label for="authName">Nombre</label>
+          <input type="text" id="authName" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="authEmail">Email</label>
+          <input type="email" id="authEmail" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="authPassword">Contraseña</label>
+          <input type="password" id="authPassword" autocomplete="current-password" required>
+        </div>
+        <p id="authError" class="form-error hidden"></p>
+        <button type="submit" id="authSubmitBtn" class="btn-primary">Entrar</button>
+      </form>
+
+      <p class="modal-toggle">
+        <span id="toggleModeText">¿No tienes cuenta?</span>
+        <button type="button" id="toggleModeBtn" class="link-btn">Regístrate</button>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
