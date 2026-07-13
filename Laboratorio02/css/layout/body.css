@@ -1,0 +1,26 @@
+body {
+
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--chalk);
+
+    background-color: var(--pitch-dark);
+
+    background-image:
+        radial-gradient(circle 90px at 50% 0,
+            transparent 88px,
+            var(--line) 89px,
+            var(--line) 90px,
+            transparent 91px),
+
+        linear-gradient(var(--pitch-dark), var(--pitch-dark)),
+
+        repeating-linear-gradient(90deg,
+            var(--pitch) 0 8%,
+            var(--pitch-light) 8% 8.4%);
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+}

@@ -1,0 +1,68 @@
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 6px;
+  padding: 9px 16px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: transform 0.12s ease, background 0.15s ease,
+              border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Botón principal */
+
+.btn-primary {
+  background: var(--gold);
+  color: #201400;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #ffd766;
+}
+
+/* Botón secundario */
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--chalk);
+  border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+  background: var(--pitch-light);
+  border-color: var(--gold);
+}
+
+/* Botón tipo enlace */
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.link-btn:hover {
+  color: #ffd766;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

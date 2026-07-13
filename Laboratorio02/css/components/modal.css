@@ -1,0 +1,42 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 12, 8, 0.75);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: var(--card);
+    border: 1px solid var(--gold-deep);
+    border-radius: 12px;
+    padding: 26px;
+    width: 320px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal h2 {
+    margin-top: 0;
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    color: var(--gold);
+}
+
+.modal-msg { color: var(--muted); font-size: 0.85rem; }
+
+.modal-toggle { 
+    text-align: center; 
+    font-size: 0.85rem; 
+    color: var(--muted); 
+    margin-top: 12px; 
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 90%;
+        padding: 20px;
+    }
+}

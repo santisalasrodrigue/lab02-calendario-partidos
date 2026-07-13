@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+
+--pitch-dark:#052015;
+--pitch:#0c3a25;
+--pitch-light:#145334;
+--line:rgba(245,245,239,.10);
+
+--gold:#f4c542;
+--gold-deep:#d9a520;
+
+--chalk:#f5f5ef;
+--muted:#9fb8ab;
+
+--card:#0a2b1c;
+--card-border:#1d4d33;
+
+--danger:#e6484f;
+
+--font-display:'Bebas Neue','Arial Narrow',sans-serif;
+--font-body:'Inter',system-ui,sans-serif;
+--font-mono:'JetBrains Mono',monospace;
+
+}

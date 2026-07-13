@@ -1,0 +1,98 @@
+
+/* Reset básico para inputs y selects */
+select, 
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    display: block;
+    box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+    background: var(--card);
+    color: var(--chalk);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: var(--font-body);
+    font-size: 1rem; /* 1rem previene el zoom automático en iOS */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Estilo para la flecha personalizada del select */
+select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23f5f5ef' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+/* Estado de foco unificado */
+select:focus, 
+input:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--gold);
+    outline-offset: 1px;
+}
+
+/* Contenedor de filtros: Unificación de layout */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Alineación consistente para los labels dentro de filtros */
+.filters label {
+    display: block;
+    width: 100%;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Espaciado del select dentro del label */
+.filters label select {
+    margin-top: 6px;
+}
+
+/* Estilo específico para checkbox */
+.checkbox-label {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px !important;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto !important; /* El checkbox no debe ser de ancho completo */
+}
+
+/* Estilo para botones de enlace */
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--gold);
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font-body);
+}
+
+/* Estilo para errores de formulario */
+.form-error {
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin: 5px 0;
+}
+
+/* Contenedor de grupos de formularios */
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}

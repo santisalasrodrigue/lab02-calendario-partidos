@@ -1,0 +1,21 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 50px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+}
+
+.loader::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 50%, transparent 30%, var(--gold) 31% 33%, transparent 34%),
+      conic-gradient(var(--chalk) 0 25%, var(--pitch) 0 50%, var(--chalk) 0 75%, var(--pitch) 0);
+    animation: spin 0.9s linear infinite;
+}
