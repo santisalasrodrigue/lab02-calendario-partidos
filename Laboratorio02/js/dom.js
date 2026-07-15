@@ -1,0 +1,31 @@
+// =========================================================
+// DOM: referencias centralizadas a los elementos del HTML
+// =========================================================
+export const els = {
+  container: document.getElementById('matchesContainer'),
+  sentinel: document.getElementById('scrollSentinel'),
+  offlineBanner: document.getElementById('offlineBanner'),
+  loader: document.getElementById('loader'),
+  emptyState: document.getElementById('emptyState'),
+  groupFilter: document.getElementById('groupFilter'),
+  stadiumFilter: document.getElementById('stadiumFilter'),
+  favoritesOnly: document.getElementById('favoritesOnly'),
+  reloadBtn: document.getElementById('reloadBtn'),
+  userStatus: document.getElementById('userStatus'),
+  logoutBtn: document.getElementById('logoutBtn'),
+  authModal: document.getElementById('authModal'),
+  authForm: document.getElementById('authForm'),
+  authModalTitle: document.getElementById('authModalTitle'),
+  authModalMsg: document.getElementById('authModalMsg'),
+  authName: document.getElementById('authName'),
+  nameField: document.getElementById('nameField'),
+  authEmail: document.getElementById('authEmail'),
+  authPassword: document.getElementById('authPassword'),
+  authError: document.getElementById('authError'),
+  authSubmitBtn: document.getElementById('authSubmitBtn'),
+  toggleModeBtn: document.getElementById('toggleModeBtn'),
+  toggleModeText: document.getElementById('toggleModeText'),
+  zoomInBtn: document.getElementById('zoomInBtn'),
+  zoomOutBtn: document.getElementById('zoomOutBtn'),
+  filtersBar: document.getElementById('filtersBar'),
+};
